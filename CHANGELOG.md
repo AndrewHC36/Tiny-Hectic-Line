@@ -1,3 +1,6 @@
+### Indev 2.3.2-v2 - [Aug 9, 2018]
+    * Released the installer on Windows
+
 ### Indev 2.3.2 - [Aug 9, 2018]
     * Added, stamp
     * Changed, player cannot move
