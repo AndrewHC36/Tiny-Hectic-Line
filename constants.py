@@ -5,8 +5,13 @@ FPS = 100  # ** DO NOT CHANGE **
 BACKG_COLOR = (255, 255, 255)
 SCREEN = (1920, 1080)
 CHAR_SIZE = 50
-STARTING_POS = [SCREEN[0]//2, SCREEN[1]-CHAR_SIZE]
+STARTING_POS = [SCREEN[0]//2, SCREEN[1]//2]
+LOWER_BOUND_ADD = 20
+CHAR_COLOR = (255, 100, 0)
+STMP_COLOR = (0, 100, 255)
+TILE_SIZE = 60
 
-# direction
-LEFT = (-1, -1)
-RIGHT = (1, -1)
+# direction, character movement
+SPEED = (4, -4)  # ratio 4:3
+LEFT = (-SPEED[0], SPEED[1])
+RIGHT = (SPEED[0], SPEED[1])
