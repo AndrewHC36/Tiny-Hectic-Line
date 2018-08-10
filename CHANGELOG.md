@@ -1,3 +1,9 @@
+### Indev 3.4.0 - [Aug 10, 2018]
+    * Updated installer-win.bat file
+    * Updated installer-linux.sh file
+    * Updated README file
+    * NOTE: Still figuring out how to add the MacOS console
+
 ### Indev 3.1.3 - [Aug 10, 2018]
     * Updated README file
 

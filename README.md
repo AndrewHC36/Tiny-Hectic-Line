@@ -13,20 +13,24 @@ more points.
 Your main objective is live the longest and gain the most score
 
 ### Requirements:
-  * Python Interpreter 3.6 or higher
-  * Git 2.18.0 or higher
-  * PyGame 1.9.3 or higher
+  * Python Interpreter 3.6 <
+  * Git 2.18.0 <
+  * PyGame 1.9.3 <
 
 ### Download and Run:
 ##### Windows:
-  * Download installer-win.bat
-  * Click (Run) installer-win.bat
-  * Input your file location and your done
+  * Download `installer-win.bat`
+  * Click (Run) installer-win.bat to install
 ##### Linux or Unix:
-  * Download installer-linux.sh
-  * Run installer-linux.sh
-  * Input your file location and your done
+  * Download `installer-linux.sh`
+  * Click (Run) installer-linux.sh to install
 ##### MacOs :
-  * Download or clone the respository to your preferred place
+  * Download or clone the repository to your preferred place
   * Run main.py
-  
+
+### Notice for Linux or Unix:
+The developer of this project never used a Linux operating system,
+so the bash script may not guaranteed to work. Only tested on git 2.18.0 bash.
+The developer of this project is not responsible for any loss or damage on part of
+`installer-linux.sh` file.
+Install the `installer-linux.sh` at your own risk!
