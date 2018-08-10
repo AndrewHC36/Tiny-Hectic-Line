@@ -11,6 +11,10 @@ cd "%DEST%"
 md TinyHecticLine
 cd TinyHecticLine
 git clone git://github.com/AndrewShen31/Tiny-Hectic-Line
+py main.py
 
+goto end
 :stop
 set /p D="PRESS ENTER TO LEAVE"
+
+:end

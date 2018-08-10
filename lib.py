@@ -31,7 +31,32 @@ class Character:
     def die(cls): cls.isDEAD = True
 
 
-def generateTile():
-    sdt = []
+class Tiles:
+    tile_data = []
+    r = 0
 
-    return sdt
+    def __init__(self, win, bloc):
+        self.WIN = win
+        self.bx = bloc[0]
+        self.by = bloc[1]
+
+    def update(self, bloc):
+        self.bx = bloc[0]
+        self.by = bloc[1]
+
+    @classmethod
+    def generate(cls):
+        pass
+
+    def show(self):
+        for i in range(VIEW_BOX[0], VIEW_BOX[2]):
+            for j in range(VIEW_BOX[1], VIEW_BOX[3]):
+                if j%2 == 0: x, y, X, Y = i*TILE_SIZE-self.bx, j//2*TILE_SIZE-self.by, i*TILE_SIZE+TILE_SIZE-self.bx, j//2*TILE_SIZE+TILE_SIZE-self.by
+                else: x, y, X, Y = i*TILE_SIZE-TILE_SIZE//2-self.bx, j//2*TILE_SIZE-TILE_SIZE//2-self.by, i*TILE_SIZE+TILE_SIZE//2-self.bx, j//2*TILE_SIZE+TILE_SIZE//2-self.by
+                pyg.draw.line(self.WIN, (0, 255, 0), (x+TILE_ORT, y), (X, y+TILE_ORT), 4)
+                pyg.draw.line(self.WIN, (0, 255, 0), (X, y+TILE_ORT), (X-TILE_ORT, Y), 4)
+                pyg.draw.line(self.WIN, (0, 255, 0), (X-TILE_ORT, Y), (x, Y-TILE_ORT), 4)
+                pyg.draw.line(self.WIN, (0, 255, 0), (x, Y-TILE_ORT), (x+TILE_ORT, y), 4)
+
+
+

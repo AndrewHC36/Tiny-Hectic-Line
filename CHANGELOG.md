@@ -1,3 +1,9 @@
+### Indev 3.0.0 - [Aug 10, 2018]
+    * Added tiles
+
+### Indev 2.3.2-v3 - [Aug 9, 2018]
+    * Updated README file
+
 ### Indev 2.3.2-v2 - [Aug 9, 2018]
     * Released the installer on Windows
 
