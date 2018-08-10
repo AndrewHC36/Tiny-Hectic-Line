@@ -1,3 +1,7 @@
+### Indev 3.1.2 - [Aug 10, 2018]
+    * Added installer-linux for linux and unix and other related to that
+    * Renamed both file to distinguish
+
 ### Indev 3.0.0 - [Aug 10, 2018]
     * Added tiles
 

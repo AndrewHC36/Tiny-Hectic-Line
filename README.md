@@ -11,11 +11,18 @@ either ran out of scores or you fall from a dead end road.
 ### Requirements:
   * Python Interpreter 3.6 or higher
   * Git v2.18.0 or higher
+  * PyGame
 
 ### Download and Run:
 #### Windows:
-  * Download installer.bat
-  * Click (Run) installer.bat
-  * Input your file location
-  * Happy Playing
+  * Download installer-win.bat
+  * Click (Run) installer-win.bat
+  * Input your file location and your done
+#### Linux or Unix:
+  * Download installer-linux.sh
+  * Run installer-linux.sh
+  * Input your file location and your done
+### MacOs :
+  * Download or clone the respository to your preferred place
+  * Run main.py
   
