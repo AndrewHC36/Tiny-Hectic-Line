@@ -1,3 +1,6 @@
+### Indev 3.1.3 - [Aug 10, 2018]
+    * Updated README file
+
 ### Indev 3.1.2 - [Aug 10, 2018]
     * Added installer-linux for linux and unix and other related to that
     * Renamed both file to distinguish

@@ -6,23 +6,27 @@ traps and obstacles as this will decrease your points. There is two you can lose
 either ran out of scores or you fall from a dead end road.
 
 ### How to Play:
-  * UNDER DEVELOPMENT
+Press [SPACE] to change direction of the tiles. And step on higher number tiles to gain
+more points.
+
+##### Main Objective:
+Your main objective is live the longest and gain the most score
 
 ### Requirements:
   * Python Interpreter 3.6 or higher
-  * Git v2.18.0 or higher
-  * PyGame
+  * Git 2.18.0 or higher
+  * PyGame 1.9.3 or higher
 
 ### Download and Run:
-#### Windows:
+##### Windows:
   * Download installer-win.bat
   * Click (Run) installer-win.bat
   * Input your file location and your done
-#### Linux or Unix:
+##### Linux or Unix:
   * Download installer-linux.sh
   * Run installer-linux.sh
   * Input your file location and your done
-### MacOs :
+##### MacOs :
   * Download or clone the respository to your preferred place
   * Run main.py
   
