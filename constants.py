@@ -7,7 +7,7 @@ SCREEN = (1920, 1080)  # 1920, 1080
 CHAR_SIZE = 50
 STARTING_POS = [SCREEN[0]//2, SCREEN[1]//2]
 LOWER_BOUND_ADD = 20
-VIEW_BOX = (0, -2, 20, 24)  # units is each tile
+VIEW_BOX = (0, -2, 20, 24)  # units is each tile, (0, -2, 20, 24)
 TILE_SIZE = 100
 TILE_ORT = TILE_SIZE//2  # ** DO NOT CHANGE ** Tile orientation (rotation)
 

@@ -1,45 +1,50 @@
+### Indev 6.2.2rev2 - [Aug 11, 2018]
+* Fixed tile generation
+* Fixed readme page where shows code not list
+* NOTE: Tile generation will come soon!
+
 ### Indev 6.1.0v1 - [Aug 11, 2018]
-    * Added a true tile generation
-    * Speed is faster to make game more harder
+* Added a true tile generation
+* Speed is faster to make game more harder
 
 ### Indev 5.1.0 - [Aug 11, 2018]
-    * Added boundary
-    * Character moves left and right only
-    * For now the tiles just loops
+* Added boundary
+* Character moves left and right only
+* For now the tiles just loops
 
 ### Indev 3.4.0 - [Aug 10, 2018]
-    * Updated installer-win.bat file
-    * Updated installer-linux.sh file
-    * Updated README file
-    * NOTE: Still figuring out how to add the MacOS console
+* Updated installer-win.bat file
+* Updated installer-linux.sh file
+* Updated README file
+* NOTE: Still figuring out how to add the MacOS console
 
 ### Indev 3.1.3 - [Aug 10, 2018]
-    * Updated README file
+* Updated README file
 
 ### Indev 3.1.2 - [Aug 10, 2018]
-    * Added installer-linux for linux and unix and other related to that
-    * Renamed both file to distinguish
+* Added installer-linux for linux and unix and other related to that
+* Renamed both file to distinguish
 
 ### Indev 3.0.0 - [Aug 10, 2018]
-    * Added tiles
+* Added tiles
 
 ### Indev 2.3.2-v3 - [Aug 9, 2018]
-    * Updated README file
+* Updated README file
 
 ### Indev 2.3.2-v2 - [Aug 9, 2018]
-    * Released the installer on Windows
+* Released the installer on Windows
 
 ### Indev 2.3.2 - [Aug 9, 2018]
-    * Added, stamp
-    * Changed, player cannot move
-    * Added, stamp can move
-    * Added others
-    * Fixed few things
+* Added, stamp
+* Changed, player cannot move
+* Added, stamp can move
+* Added others
+* Fixed few things
 
 ### Indev 2.0 - [Aug 9, 2018]
-    * Added the character
-    * Added character posistion
-    * More things
+* Added the character
+* Added character posistion
+* More things
 
 ### Indev 1.0 - [Aug 8, 2018]
-    * Initiated the project <Tiny Hectic Line>
+* Initiated the project <Tiny Hectic Line>

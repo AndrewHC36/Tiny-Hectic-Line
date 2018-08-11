@@ -9,10 +9,11 @@ def generate(dt, size):
             dt[i].append(r.randint(0,1))
 
 def generateAdd(dt):
-    cur = []
-    for i in range(len(dt[0])):
-        if i == 5: cur.append(2)
-        else: cur.append(1)
-    dt.insert(0, cur)
-    del dt[-1]
+    for j in range(2):
+        cur = []
+        for i in range(len(dt[0])):
+            if i == 5: cur.append(1)
+            else: cur.append(1)
+        dt.insert(0, cur)
+    del dt[-2:]
 
