@@ -1,3 +1,7 @@
+### Indev 6.1.0v1 - [Aug 11, 2018]
+    * Added a true tile generation
+    * Speed is faster to make game more harder
+
 ### Indev 5.1.0 - [Aug 11, 2018]
     * Added boundary
     * Character moves left and right only
