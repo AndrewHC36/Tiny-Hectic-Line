@@ -18,9 +18,8 @@ GAME_LOOP = True
 DIR = RIGHT
 CHAR_POS = STARTING_POS  # character pos
 TERR_POS = [0, 0]
-OFFSET = [0, 0]
 
-MAIN_CHAR = l.Character(WIN, CHAR_POS)
+MAIN_CHAR = l.Character(WIN, TERR_POS, CHAR_POS)
 TILE = l.Tiles(WIN, TERR_POS)
 GEN_TILES = []
 
@@ -40,10 +39,16 @@ while GAME_LOOP:
 
     MAIN_CHAR.show()
     MAIN_CHAR.stamp(DIR)
-    MAIN_CHAR.update(CHAR_POS)
+    MAIN_CHAR.update(TERR_POS, CHAR_POS)
 
-    TERR_POS[0] += DIR[0]
+    CHAR_POS[0] += DIR[0]
     TERR_POS[1] += DIR[1]
+
+    if CHAR_POS[0] < -TILE_SIZE: CHAR_POS[0] = SCREEN[0]
+    elif CHAR_POS[0] > SCREEN[0]: CHAR_POS[0] = -TILE_SIZE
+
+    if TERR_POS[1] <= -TILE_SIZE:
+        TERR_POS[1] += TILE_SIZE
 
     pyg.display.flip()
     CLK.tick(FPS)

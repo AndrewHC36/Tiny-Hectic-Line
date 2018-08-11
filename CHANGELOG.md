@@ -1,3 +1,8 @@
+### Indev 5.1.0 - [Aug 11, 2018]
+    * Added boundary
+    * Character moves left and right only
+    * For now the tiles just loops
+
 ### Indev 3.4.0 - [Aug 10, 2018]
     * Updated installer-win.bat file
     * Updated installer-linux.sh file

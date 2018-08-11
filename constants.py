@@ -11,7 +11,7 @@ VIEW_BOX = (0, 0, 20, 24)  # units is each tile
 CHAR_COLOR = (255, 100, 0)
 STMP_COLOR = (0, 100, 255)
 TILE_SIZE = 100
-TILE_ORT = TILE_SIZE//2  # Tile orientation (rotation)
+TILE_ORT = TILE_SIZE//2  # ** DO NOT CHANGE ** Tile orientation (rotation)
 
 # direction, character movement
 SPEED = (4, -4)  # ratio 4:3
