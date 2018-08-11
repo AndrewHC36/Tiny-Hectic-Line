@@ -4,10 +4,9 @@ Time: Aug 8, 2018
 A game of 'Tiny Hectic Line'
 """
 
-from constants import *
+from src.constants import *
 import pygame as pyg
-import gameGeneration as g
-import lib as l
+from src import lib as l, gameGeneration as g
 import ctypes
 ctypes.windll.user32.SetProcessDPIAware()
 

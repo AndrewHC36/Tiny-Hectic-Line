@@ -1,3 +1,7 @@
+### Indev 6.2.2rev3 (6.2.4) - [Aug 11, 2018]
+* Changed the README file for MacOS
+* (All python files moved down to `src` folder)
+
 ### Indev 6.2.2rev2 - [Aug 11, 2018]
 * Fixed tile generation
 * Fixed readme page where shows code not list

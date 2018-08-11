@@ -7,15 +7,16 @@ either ran out of scores or you fall from a dead end road.
 
 ### How to Play:
 Press [SPACE] to change direction of the tiles. And step on higher number tiles to gain
-more points.
+more points. And becareful of empty tiles and obstacles as this will reduce your points until
+you die.
 
 ##### Main Objective:
-Your main objective is live the longest and gain the most score
+Your main objective is live the longest and gain the most points.
 
 ### Requirements:
-  * Python Interpreter 3.6 <
-  * Git 2.18.0 <
-  * PyGame 1.9.3 <
+  * Python Interpreter 3.6
+  * Git 2.18.0
+  * PyGame 1.9.3
 
 ### Download and Run:
 ##### Windows:
@@ -25,8 +26,8 @@ Your main objective is live the longest and gain the most score
   * Download `installer-linux.sh`
   * Click (Run) installer-linux.sh to install
 ##### MacOs :
-  * Download or clone the repository to your preferred place
-  * Run main.py
+  * Download `installer-linux.sh`  * Note: This is a bash script
+  * Click (Run) installer-linux.sh to install
 
 ### Notice for Linux or Unix:
 The developer of this project never used a Linux operating system,
