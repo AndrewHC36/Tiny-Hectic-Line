@@ -5,6 +5,10 @@ Or even better, stepping on higher number tiles which gives you more score. Be c
 traps and obstacles as this will decrease your points. There is two you can lose, first you
 either ran out of scores or you fall from a dead end road.
 
+### Ideas and future addition:
+* ADD: Obstacles
+* CHANGE: Not all tiles have points
+
 ### How to Play:
 Press [SPACE] to change direction of the tiles. And step on higher number tiles to gain
 more points. And becareful of empty tiles and obstacles as this will reduce your points until

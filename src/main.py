@@ -19,8 +19,9 @@ DIR = RIGHT
 CHAR_POS = STARTING_POS  # character pos
 TERR_POS = [0, 0]
 
-MAIN_CHAR = l.Character(WIN, TERR_POS, CHAR_POS)
+MAIN_CHAR = l.Character(WIN, CHAR_POS)
 TILE = l.Tiles(WIN, TERR_POS)
+PBOX = l.PointBox(WIN, (50, 50))
 GEN_TILES = []
 g.generate(GEN_TILES, (VIEW_BOX[2]-VIEW_BOX[0], VIEW_BOX[3]-VIEW_BOX[1]))
 MAIN_CHAR.addStpPnt(CHAR_POS)
@@ -46,17 +47,21 @@ while GAME_LOOP:
     MAIN_CHAR.addCurPnt(CHAR_POS)
     MAIN_CHAR.show()
     MAIN_CHAR.stamp(DIR)
-    MAIN_CHAR.update(TERR_POS, CHAR_POS)
+    MAIN_CHAR.update(CHAR_POS)
+
+    PBOX.show()
 
     if not stp:
         CHAR_POS[0] += DIR[0]
         TERR_POS[1] += DIR[1]
 
-    if CHAR_POS[0] < -TILE_SIZE: CHAR_POS[0] = SCREEN[0]; MAIN_CHAR.addStpPnt(CHAR_POS)
-    elif CHAR_POS[0] > SCREEN[0]: CHAR_POS[0] = -TILE_SIZE; MAIN_CHAR.addStpPnt(CHAR_POS)
+    if CHAR_POS[0] < -TILE_SIZE: CHAR_POS[0] = SCREEN[0]; MAIN_CHAR.addStpPnt(["BREAK", CHAR_POS[0], CHAR_POS[1]]);
+    elif CHAR_POS[0] > SCREEN[0]: CHAR_POS[0] = -TILE_SIZE; MAIN_CHAR.addStpPnt(["BREAK", CHAR_POS[0], CHAR_POS[1]])
     if TERR_POS[1] <= -TILE_SIZE:
         g.generateAdd(GEN_TILES)
         TERR_POS[1] += TILE_SIZE
+
+    if GEN_TILES[CHAR_POS[1]//TILE_SIZE][CHAR_POS[0]//TILE_SIZE] != 0: PBOX.inc(5)
 
     pyg.display.flip()
     CLK.tick(FPS)

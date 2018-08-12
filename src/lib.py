@@ -9,18 +9,14 @@ class Character:
     stampPoint = []
     stampL = []
 
-    def __init__(self, win, bloc, ploc):
+    def __init__(self, win, ploc):
         self.WIN = win
         self.px = ploc[0]
         self.py = ploc[1]
-        self.bx = bloc[0]
-        self.by = bloc[1]
 
-    def update(self, bloc, ploc):
+    def update(self, ploc):
         self.px = ploc[0]
         self.py = ploc[1]
-        self.bx = bloc[0]
-        self.by = bloc[1]
 
     def show(self):
         if not Character.isDEAD: pyg.draw.circle(self.WIN, CHAR_COLOR, (self.px, self.py), CHAR_SIZE//2)
@@ -32,9 +28,11 @@ class Character:
     def addCurPnt(cls, loc): cls.stampPoint[-1] = loc
 
     def stamp(self, dir):
-        Character.stampPoint = [[i[0], i[1]-dir[1]] for i in Character.stampPoint]
+        for i in Character.stampPoint:
+            if i != "BREAK": Character.stampPoint = [i[0], i[1]-dir[1]] # x dont chng bc char_pos x moves
         for i in range(len(Character.stampPoint)-1):  # -1 because its length, and suppose to use index
-            pyg.draw.line(self.WIN, STMP_COLOR, Character.stampPoint[i], Character.stampPoint[i+1], CHAR_SIZE//2)
+            if Character.stampPoint[i+1][0] == "BREAK": pass
+            else: pyg.draw.line(self.WIN, STMP_COLOR, Character.stampPoint[i], Character.stampPoint[i+1], CHAR_SIZE//2)
         if len(Character.stampPoint) > 1:
             if Character.stampPoint[1][1] >= SCREEN[1]: del Character.stampPoint[0]
 
@@ -68,3 +66,21 @@ class Tiles:
                     pyg.draw.polygon(self.WIN, color, ((x+TILE_ORT, y), (X, y+TILE_ORT), (X-TILE_ORT, Y), (x, Y-TILE_ORT)))
                     #self.WIN.blit(pyg.font.SysFont('Arial', 30).render(str(gen[j-VIEW_BOX[1]][i-VIEW_BOX[0]]), False, (0, 0, 0)), (x+TILE_ORT, y+TILE_ORT))
 
+
+class PointBox:
+    high = 0
+    current = 0
+
+    def __init__(self, win, locA):  # <self>, <surface>, beginning location, end location
+        self.WIN = win
+        self.ax = locA[0]
+        self.ay = locA[1]
+
+    def show(self):
+        self.WIN.blit(pyg.font.SysFont('Arial', 40).render(str("SCORE: "+str(PointBox.current)), False, (0, 0, 0)),(self.ax, self.ay))
+
+    @classmethod
+    def inc(cls, n): cls.current += n
+
+    @classmethod
+    def dnc(cls, n): cls.current -= n

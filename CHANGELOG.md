@@ -1,3 +1,7 @@
+### Indev 10.0.0 - [Aug 12, 2018]
+* Added: score box
+* Added: score box increment when player step on tiles (for now)
+
 ### Indev 8.1.1 (8.1rev2) - [Aug 12, 2018]:
 * Changed: Stamps will no longer consist of squares. With lines, speeds boost up by 3x
 * Removed text for now.
