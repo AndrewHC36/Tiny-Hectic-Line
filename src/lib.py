@@ -6,6 +6,7 @@ pyg.init()
 class Character:
     SCORE = 0  # Its like health point (hp)
     isDEAD = False
+    stampPoint = []
     stampL = []
 
     def __init__(self, win, bloc, ploc):
@@ -24,20 +25,24 @@ class Character:
     def show(self):
         if not Character.isDEAD: pyg.draw.circle(self.WIN, CHAR_COLOR, (self.px, self.py), CHAR_SIZE//2)
 
+    @classmethod
+    def addStpPnt(cls, loc): cls.stampPoint.append(loc)
+
+    @classmethod
+    def addCurPnt(cls, loc): cls.stampPoint[-1] = loc
+
     def stamp(self, dir):
-        Character.stampL.append([self.px, self.py])
-        Character.stampL = [[i[0], i[1]-dir[1]] for i in Character.stampL]
-        for i in Character.stampL:
-            pyg.draw.rect(self.WIN, STMP_COLOR, (i[0]-CHAR_SIZE//4, i[1]-CHAR_SIZE//4, CHAR_SIZE//2, CHAR_SIZE//2))
-        if Character.stampL[0][1] > SCREEN[1]+LOWER_BOUND_ADD: Character.stampL = Character.stampL[1:len(Character.stampL)]
+        Character.stampPoint = [[i[0], i[1]-dir[1]] for i in Character.stampPoint]
+        for i in range(len(Character.stampPoint)-1):  # -1 because its length, and suppose to use index
+            pyg.draw.line(self.WIN, STMP_COLOR, Character.stampPoint[i], Character.stampPoint[i+1], CHAR_SIZE//2)
+        if len(Character.stampPoint) > 1:
+            if Character.stampPoint[1][1] >= SCREEN[1]: del Character.stampPoint[0]
 
     @classmethod
     def die(cls): cls.isDEAD = True
 
 
 class Tiles:
-    tile_data = []
-    r = 0
 
     def __init__(self, win, bloc):
         self.WIN = win
@@ -57,8 +62,9 @@ class Tiles:
             for j in range(VIEW_BOX[1], VIEW_BOX[3]):
                 if gen[j-VIEW_BOX[1]][i-VIEW_BOX[0]] != 0:
                     if gen[j-VIEW_BOX[1]][i-VIEW_BOX[0]] == 1: color = (100, 255, 0)
-                    else: color = (255, 100, 0)
+                    else: color = (gen[j-VIEW_BOX[1]][i-VIEW_BOX[0]]*2, 100, 0)
                     if j%2 == 0: x, y, X, Y = i*TILE_SIZE-self.bx, j//2*TILE_SIZE-self.by, i*TILE_SIZE+TILE_SIZE-self.bx, j//2*TILE_SIZE+TILE_SIZE-self.by
                     else: x, y, X, Y = i*TILE_SIZE-TILE_SIZE//2-self.bx, j//2*TILE_SIZE-TILE_SIZE//2-self.by, i*TILE_SIZE+TILE_SIZE//2-self.bx, j//2*TILE_SIZE+TILE_SIZE//2-self.by
                     pyg.draw.polygon(self.WIN, color, ((x+TILE_ORT, y), (X, y+TILE_ORT), (X-TILE_ORT, Y), (x, Y-TILE_ORT)))
-                    self.WIN.blit(pyg.font.SysFont('Arial', 30).render('45', False, (0, 0, 0)), (x+TILE_ORT, y+TILE_ORT))
+                    #self.WIN.blit(pyg.font.SysFont('Arial', 30).render(str(gen[j-VIEW_BOX[1]][i-VIEW_BOX[0]]), False, (0, 0, 0)), (x+TILE_ORT, y+TILE_ORT))
+

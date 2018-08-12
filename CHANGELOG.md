@@ -1,3 +1,8 @@
+### Indev 8.1.1 (8.1rev2) - [Aug 12, 2018]:
+* Changed: Stamps will no longer consist of squares. With lines, speeds boost up by 3x
+* Removed text for now.
+* Also added color for the tiles
+
 ### Indev 8.0.0 - [Aug 12, 2018]:
 * Added tile generation 1.0
 * Added number, doesnt adds up to score yet
