@@ -61,4 +61,4 @@ class Tiles:
                     if j%2 == 0: x, y, X, Y = i*TILE_SIZE-self.bx, j//2*TILE_SIZE-self.by, i*TILE_SIZE+TILE_SIZE-self.bx, j//2*TILE_SIZE+TILE_SIZE-self.by
                     else: x, y, X, Y = i*TILE_SIZE-TILE_SIZE//2-self.bx, j//2*TILE_SIZE-TILE_SIZE//2-self.by, i*TILE_SIZE+TILE_SIZE//2-self.bx, j//2*TILE_SIZE+TILE_SIZE//2-self.by
                     pyg.draw.polygon(self.WIN, color, ((x+TILE_ORT, y), (X, y+TILE_ORT), (X-TILE_ORT, Y), (x, Y-TILE_ORT)))
-
+                    self.WIN.blit(pyg.font.SysFont('Arial', 30).render('45', False, (0, 0, 0)), (x+TILE_ORT, y+TILE_ORT))

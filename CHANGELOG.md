@@ -1,3 +1,8 @@
+### Indev 8.0.0 - [Aug 12, 2018]:
+* Added tile generation 1.0
+* Added number, doesnt adds up to score yet
+* NOTE: This is slow as snail
+
 ### Indev 6.2.2rev3 (6.2.4) - [Aug 11, 2018]
 * Changed the README file for MacOS
 * (All python files moved down to `src` folder)
