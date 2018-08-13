@@ -5,6 +5,8 @@ Or even better, stepping on higher number tiles which gives you more score. Be c
 traps and obstacles as this will decrease your points. There is two you can lose, first you
 either ran out of scores or you fall from a dead end road.
 
+# NOTE: I will not be building games on Python, anymore! 
+
 ### Ideas and future addition:
 * ADD: Obstacles
 * CHANGE: Not all tiles have points
